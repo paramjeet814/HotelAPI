@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Dashbord";
+}
+<style>
+    a {
+    text-decoration:none;
+    color:#fff;
+    }
+    </style>
+
+<h1>Dashboard</h1>
+<h2 class="btn btn-danger"><a href="@Url.Action("Index","Rooms")">Room Management </a></h2>
+<h2 class="btn btn-danger"><a href="@Url.Action("Index","Bookings")">Booking Management </a></h2>
+<h2 class="btn btn-danger"><a href="@Url.Action("Index","Payments")">Payment Management </a></h2>
+<h2 class="btn btn-danger"><a href="@Url.Action("Index","Staffs")">Team Management </a></h2>
+<h2 class="btn btn-danger"><a href="@Url.Action("Index","Salaries")">Salary Management </a></h2>
+
+
+
+
+<hr />
+<h2><a href="@Url.Action("Index","Home")">Logout</a></h2>
+

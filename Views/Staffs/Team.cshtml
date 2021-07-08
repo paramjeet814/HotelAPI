@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Hotel.Models.Staff>
+
+@{
+    ViewData["Title"] = "Team";
+}
+
+
+
+
+<h1> Our Team Members</h1>
+
+
+<h1>List of Room</h1>
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                <h1>@Html.DisplayFor(modelItem => item.Name) </h1>
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/06/bb/0f/2c/cavo-maris-beach-hotel.jpg" class="img-thumbnail" />
+                <p>@Html.DisplayFor(modelItem => item.Email)</p>
+                <h2 class="btn btn-primary">Read More </h2>
+            </div>
+        }
+
+
+    </div>
+
+</div>
+
+
+
+
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
